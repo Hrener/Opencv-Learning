@@ -7,14 +7,14 @@ using namespace std;
 int main()
 {
 	Mat srcImage = imread("xiaopao.jpg");
-	//¡¾1¡¿
-	//imshow("xiaopao", srcImage(Rect(0, 0, 200, 300)));//200ÊÇÁĞÊı£¬300ÊÇĞĞÊı
-	//¡¾2¡¿
+	//ã€1ã€‘
+	//imshow("xiaopao", srcImage(Rect(0, 0, 200, 300)));//200æ˜¯åˆ—æ•°ï¼Œ300æ˜¯è¡Œæ•°
+	//ã€2ã€‘
 	Mat ROI(srcImage.rows, srcImage.cols, CV_8UC3);
 	srcImage(Rect(0, 0, 200, 300)).copyTo(ROI);
 	imshow("xiaopao", ROI);
 	
-	imshow("Ô­Í¼",srcImage);
+	imshow("åŸå›¾",srcImage);
 	waitKey(0);
 	return 0;
 }
